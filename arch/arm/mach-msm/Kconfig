@@ -34,13 +34,13 @@ config MSM_MDP31
 	depends on ARCH_QSD8X50
 	default y
 
-config TURBO_MODE 
-        bool "Turbo mode" 
-        depends on ARCH_MSM7225 || ARCH_MSM7X00A 
-        default n 
-        help 
-        This option is used to indicate hardware support for running the 
-        memory bus at a higher speed.(only for 7X00A/7225) 
+config TURBO_MODE
+    bool "Turbo mode"
+    depends on ARCH_MSM7225 || ARCH_MSM7X00A
+    default n
+    help
+      This option is used to indicate hardware support for running the
+      memory bus at a higher speed.(only for 7X00A/7225)
 
 config MSM_AMSS_VERSION
 	int
@@ -452,6 +452,13 @@ config WIFI_MEM_PREALLOC
 	bool "Preallocate memory for WiFi buffers"
 	help
 	  Preallocates memory buffers for WiFi driver
+
+config ARCH_MSM_FLASHLIGHT
+        bool "Flashlight Driver for MSM series"
+        depends on ARCH_MSM
+        default n
+        help
+          The flashlight driver is for MSM series.
 
 config VIRTUAL_KPANIC_PARTITION
 	bool "Create virtual kpanic partition"
